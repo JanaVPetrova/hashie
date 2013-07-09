@@ -1,4 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/JanaVPetrova/hashie.png)](https://codeclimate.com/github/JanaVPetrova/hashie)
+[![Code Climate](https://codeclimate.com/repos/51dc31807e00a42573002cf2/badges/6e16c1aaa80d673fc923/gpa.png)](https://codeclimate.com/repos/51dc31807e00a42573002cf2/feed)
 [![Coverage Status](https://coveralls.io/repos/JanaVPetrova/hashie/badge.png)](https://coveralls.io/r/JanaVPetrova/hashie)
 [![Build Status](https://travis-ci.org/JanaVPetrova/hashie.png)](https://travis-ci.org/JanaVPetrova/hashie)
 
