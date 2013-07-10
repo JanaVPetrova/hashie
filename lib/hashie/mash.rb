@@ -18,10 +18,11 @@ class Hashie::Mash
   end
 
   def inspect
-    res = "#{@hash.inspect}"
-    res = res.delete(",").delete(">").delete(":").delete("{").delete("}")
-    res = " " + res if !res.empty?
-    "#{Hashie::Mash.inspect}" + res 
+    #res = "#{@hash.inspect}"
+    #res = res.delete(",").delete(">").delete(":").delete("{").delete("}")
+    #res = " " + res if !res.empty?
+    #{}"#{Hashie::Mash.inspect}" + res 
+    self
   end
 
   private

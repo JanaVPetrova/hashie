@@ -31,7 +31,7 @@ describe Hashie::Mash do
   it "should print self" do
     @mash.name = "john"
     @mash.fruit = "apple"
-    expect(@mash.inspect).to eq "Hashie::Mash name=\"john\" fruit=\"apple\""
+    expect(@mash.inspect).to eq @mash
   end
 
   it "should create second level mash" do
@@ -41,11 +41,6 @@ describe Hashie::Mash do
 
   it "should inspect second level mash" do
     @mash.author!
-    expect(@mash.author.inspect).to eq "Hashie::Mash"
+    expect(@mash.author.inspect).to eq @mash.author 
   end
-
-  #it "should add key-value to second level mash" do
-  #  @mash.author!.name = "John Smith"
-  #  expect(@mash.author).to eq "Hashie::Mash name=\"John Smith\""
-  #end
 end
