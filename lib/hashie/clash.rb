@@ -1,0 +1,2 @@
+class Hashie::Clash
+end
