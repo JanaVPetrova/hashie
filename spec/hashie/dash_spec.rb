@@ -2,18 +2,15 @@ require 'spec_helper'
 
 describe Person do
   before(:each) do
-    name = "John"
-    email = "john@doe.com"
-    occupation = "Rubyist"
-    @person = Person.new(:name => name)
+    @person = Person.new(:name => "John")
   end
 
   it "should raise argument error" do
-    expect {Person.new}.to raise_error
+    expect { Person.new }.to raise_error(ArgumentError)
   end
 
   it "should create new person if 'name' exists" do
-    expect(@person).not_to eq nil
+    expect(@person.name).not_to eq nil
   end
 
   it "should return name value" do
@@ -33,11 +30,11 @@ describe Person do
     expect(@person.occupation).to eq  "Rubyist"
   end
 
-  #it "should raise NoMethodError if property is not defined" do
-  #  @person[:awesome]
-  #  @person[:name] = "nill"
-  #  raise @person.inspect
-  #  expect {@person[:awesome]}.to raise_error
-  #end
+  it "should raise NoMethodError if property is not defined" do
+    expect {@person[:awesome]}.to raise_error(NoMethodError)
+  end
 
+  it "should return occupation value" do
+    expect(@person[:occupation]).to eq "Rubyist"
+  end
 end
