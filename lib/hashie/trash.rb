@@ -19,15 +19,19 @@ class Hashie::Trash < Hashie::Dash
         end
       end
 
-      #@lambdas ||= {}
+      @lambdas ||= {}
 
-      #if options.has_key? :with
-      #  @lambdas[property_name] = options[:with]
+      if options.has_key? :transform_with
+        options[:with] = options[:transform_with]
+        options.delete(:transform_with)
+      end
 
-      #  define_method(:"#{property_name}=") do |value|
-      #    self[property_name] = value.call(@lambdas[property_name])
-      #  end
-      #end
+      if options.has_key? :with
+        @lambdas[property_name] = options[:with]
+        define_method(:"#{property_name}=") do |value|
+          self[property_name] = self.class.lambdas[property_name].call(value)
+        end
+      end
     end
   end
 
