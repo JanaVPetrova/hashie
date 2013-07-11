@@ -41,6 +41,6 @@ describe Hashie::Mash do
 
   it "should inspect second level mash" do
     @mash.author!
-    expect(@mash.author.inspect).to eq @mash.author 
+    expect(@mash.author.inspect).to eq @mash.author
   end
 end

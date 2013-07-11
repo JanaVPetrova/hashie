@@ -1,5 +1,7 @@
 require "hashie/version"
 
 module Hashie
-  # Your code goes here...
+  require 'hashie/mash'
+  require 'hashie/dash'
+  require 'hashie/trash'
 end
