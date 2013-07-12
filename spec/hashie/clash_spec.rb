@@ -16,19 +16,15 @@ describe Hashie::Clash do
   	expect(@c).to eq some_hash
   end
 
-=begin
   it "should set several values if method name includes !" do
   	@c.where!.abc('def').ghi(123)._end!.order(:created_at)
     some_hash = {:where => {:abc => 'def', :ghi => 123}, :order => :created_at}
-    raise @c.inspect
   	expect(@c).to eq some_hash
   end
 
   it "should merge hashies if keys are equal" do
   	@c.where(:abc => 'def').where(:hgi => 123)
   	some_hash = {:where => {:abc => 'def', :hgi => 123}}
-  	raise @c.inspect
   	expect(@c).to eq some_hash
   end
-=end
 end
